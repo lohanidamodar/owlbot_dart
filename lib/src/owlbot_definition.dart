@@ -1,32 +1,35 @@
 part of owlbot_dart;
 
+///
+/// An object the serializes the JSON definitions returned by owlbot API
+///
 class OwlBotDefinition {
+  /// [type] of the [word] for which the definition is received
+  /// [type] can be "noun", "verb", ...
   String type;
+
+  /// Definition or the meaning for the [word]
   String definition;
+
+  /// Example usage
   String example;
+
+  /// Image url for the word, can be null
   String imageUrl;
+
+  /// Emoji url for the [word], can be null
   String emoji;
 
-  OwlBotDefinition(
+  OwlBotDefinition._(
       {this.type, this.definition, this.example, this.imageUrl, this.emoji});
 
-  factory OwlBotDefinition.fromJson(Map<String, dynamic> json) {
-    return OwlBotDefinition(
+  factory OwlBotDefinition._fromJson(Map<String, dynamic> json) {
+    return OwlBotDefinition._(
       type: json['type'],
       definition: json['definition'],
       example: json['example'],
       imageUrl: json['image_url'],
       emoji: json['emoji'],
     );
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['type'] = this.type;
-    data['definition'] = this.definition;
-    data['example'] = this.example;
-    data['image_url'] = this.imageUrl;
-    data['emoji'] = this.emoji;
-    return data;
   }
 }
