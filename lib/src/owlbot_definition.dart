@@ -4,8 +4,8 @@ class OwlBotDefinition {
   String type;
   String definition;
   String example;
-  Null imageUrl;
-  Null emoji;
+  String imageUrl;
+  String emoji;
 
   OwlBotDefinition(
       {this.type, this.definition, this.example, this.imageUrl, this.emoji});

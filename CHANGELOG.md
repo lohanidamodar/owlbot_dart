@@ -1,3 +1,2 @@
-## [0.0.1] - TODO: Add release date.
-
-* TODO: Describe initial release.
+## [1.0.0] - Owlbot api
+* Using: `OwlBot(token: "your_token").define(word:"owl")`
