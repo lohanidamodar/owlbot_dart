@@ -2,6 +2,8 @@
 
 Clean, easy interface with [owlbot.info](https://owlbot.info) dictionary API
 
+[![Pub Package](https://img.shields.io/pub/v/owlbot_dart.svg?style=flat-square)](https://pub.dev/packages/owlbot_dart) ![Publish](https://github.com/lohanidamodar/owlbot_dart/workflows/Publish/badge.svg)
+
 ## Usage
 
 To use this plugin add `owlbot_dart` as a [dependency in your pubspec.yaml file](https://flutter.io/docs/development/packages-and-plugins/using-packages).
