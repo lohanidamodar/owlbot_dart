@@ -1,13 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:owlbot_dart/owlbot_dart.dart';
+import 'token.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
+  test('can get definition', ()async {
+    final owlbot = OwlBot(token: TOKEN);
+    final res = await owlbot.define(word: null);
+    assert(res is OwlBotResponse);
   });
 }
