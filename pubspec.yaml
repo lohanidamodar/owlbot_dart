@@ -1,6 +1,7 @@
 name: owlbot_dart
-description: A clean and simple interface to interact with owlbot.info, dictionary API. Returns response in nice formatted dart objects
-version: 1.0.6
+description: A clean and simple interface to interact with owlbot.info,
+  dictionary API. Returns response in nice formatted dart objects
+version: 1.1.0
 homepage: https://dlohani.com.np
 repository: https://github.com/lohanidamodar/owlbot_dart
 
@@ -8,9 +9,9 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  http: ^0.12.2
   meta: ^1.1.8
+  restio: ^0.10.8
 
 dev_dependencies:
-  test:
+  ? test
 

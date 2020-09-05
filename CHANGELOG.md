@@ -1,3 +1,7 @@
+## [1.1.0] - Owlbot api
+* Using: `OwlBot(token: "your_token").define(word:"owl")`
+* Had to switch to restio client instead of HTTP as http was not parsing the pronounciation correctly. Nothing breaking.
+
 ## [1.0.7] - Owlbot api
 * Using: `OwlBot(token: "your_token").define(word:"owl")`
 * Refactored to expose fromJson and toJson functions of the response and definition models so that it can be easily used for offline persisting

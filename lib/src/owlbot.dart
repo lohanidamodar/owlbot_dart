@@ -33,12 +33,15 @@ class OwlBot {
   ///
 
   Future<OwlBotResponse> define({@required word}) async {
-    final res = await http.Client().get(
-      "$_baseURL/api/v4/dictionary/$word",
-      headers: {'Authorization': 'Token ' + token},
-    );
-    if (res.statusCode == 200) {
-      return OwlBotResponse.fromJson(json.decode(res.body));
+    final client = Restio();
+    final request = Request(
+        uri: RequestUri.parse("$_baseURL/api/v4/dictionary/$word"),
+        method: HttpMethod.get,
+        headers: Headers([Header("Authorization", 'Token ' + token)]));
+    final res = await client.newCall(request).execute();
+    if (res.code == 200) {
+      final resp = await res.body.string();
+      return OwlBotResponse.fromJson(json.decode(resp));
     } else {
       return null;
     }
