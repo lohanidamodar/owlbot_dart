@@ -23,7 +23,8 @@ class OwlBotDefinition {
   OwlBotDefinition._(
       {this.type, this.definition, this.example, this.imageUrl, this.emoji});
 
-  factory OwlBotDefinition._fromJson(Map<String, dynamic> json) {
+  /// Create a [OwlBotDefinition] object from json returned by the API
+  factory OwlBotDefinition.fromJson(Map<String, dynamic> json) {
     return OwlBotDefinition._(
       type: json['type'],
       definition: json['definition'],
@@ -31,5 +32,16 @@ class OwlBotDefinition {
       imageUrl: json['image_url'],
       emoji: json['emoji'],
     );
+  }
+
+  /// Returns a [Map<String,dynamic>] from [OwlBotDefinition] object
+  Map<String, dynamic> toJson() {
+    return {
+      "type": type,
+      "definition": definition,
+      "example": example,
+      "image_url": imageUrl,
+      "emoji": emoji,
+    };
   }
 }

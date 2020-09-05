@@ -38,7 +38,7 @@ class OwlBot {
       headers: {'Authorization': 'Token ' + token},
     );
     if (res.statusCode == 200) {
-      return OwlBotResponse._fromJson(json.decode(res.body));
+      return OwlBotResponse.fromJson(json.decode(res.body));
     } else {
       return null;
     }
