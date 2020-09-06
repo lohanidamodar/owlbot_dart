@@ -1,6 +1,10 @@
+## [1.1.1] - Owlbot api
+* Using: `OwlBot(token: "your_token").define(word:"owl")`
+* Fix spelling error with `pronunciation`
+
 ## [1.1.0] - Owlbot api
 * Using: `OwlBot(token: "your_token").define(word:"owl")`
-* Had to switch to restio client instead of HTTP as http was not parsing the pronounciation correctly. Nothing breaking.
+* Had to switch to restio client instead of HTTP as http was not parsing the pronunciation correctly. Nothing breaking.
 
 ## [1.0.7] - Owlbot api
 * Using: `OwlBot(token: "your_token").define(word:"owl")`

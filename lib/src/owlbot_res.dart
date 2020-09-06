@@ -32,7 +32,7 @@ class OwlBotResponse {
     return {
       "definitions": definitions?.map((e) => e.toJson())?.toList(),
       "word": word,
-      "pronounciation": pronunciation,
+      "pronunciation": pronunciation,
     };
   }
 }
