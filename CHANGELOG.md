@@ -1,3 +1,7 @@
+## [2.0.0] - Owlbot api
+* Upgrade to null safety
+* using http package internally
+
 ## [1.1.1] - Owlbot api
 * Using: `OwlBot(token: "your_token").define(word:"owl")`
 * Fix spelling error with `pronunciation`
