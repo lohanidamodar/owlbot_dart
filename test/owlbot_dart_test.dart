@@ -5,7 +5,7 @@ import 'token.dart';
 void main() {
   test('can get definition', () async {
     final owlbot = OwlBot(token: TOKEN);
-    final res = await owlbot.define(word: "owl");
+    final res = await (owlbot.define(word: "owl") as FutureOr<OwlBotResponse>);
     assert(res is OwlBotResponse);
   });
 }

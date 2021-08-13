@@ -6,19 +6,19 @@ part of owlbot_dart;
 class OwlBotDefinition {
   /// [type] of the [word] for which the definition is received
   /// [type] can be "noun", "verb", ...
-  String type;
+  String? type;
 
   /// Definition or the meaning for the [word]
-  String definition;
+  String? definition;
 
   /// Example usage
-  String example;
+  String? example;
 
   /// Image url for the word, can be null
-  String imageUrl;
+  String? imageUrl;
 
   /// Emoji url for the [word], can be null
-  String emoji;
+  String? emoji;
 
   OwlBotDefinition._(
       {this.type, this.definition, this.example, this.imageUrl, this.emoji});

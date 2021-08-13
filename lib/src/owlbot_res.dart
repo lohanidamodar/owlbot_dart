@@ -5,13 +5,13 @@ part of owlbot_dart;
 ///
 class OwlBotResponse {
   /// List of definitions for the [word]
-  List<OwlBotDefinition> definitions;
+  List<OwlBotDefinition>? definitions;
 
   /// The [word] for which the definition was loaded
-  String word;
+  String? word;
 
   /// Pronounciation for the [word]
-  String pronunciation;
+  String? pronunciation;
 
   OwlBotResponse._({this.definitions, this.word, this.pronunciation});
 
@@ -30,7 +30,7 @@ class OwlBotResponse {
   /// Returns a [Map<String,dynamic>] from [OwlBotResponse] object
   Map<String, dynamic> toJson() {
     return {
-      "definitions": definitions?.map((e) => e.toJson())?.toList(),
+      "definitions": definitions?.map((e) => e.toJson()).toList(),
       "word": word,
       "pronunciation": pronunciation,
     };
