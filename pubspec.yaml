@@ -8,10 +8,9 @@ repository: https://github.com/lohanidamodar/owlbot_dart
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
-dependencies:
-  meta: ^1.1.8
-  restio: ^0.10.8
+dependencies: 
+  http: ^0.13.3
 
 dev_dependencies:
-  ? test
+  test: 
 
